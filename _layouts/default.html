@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<div id="wrapper">
+  <div id="inner">
+    <div id="container">
+      <header>
+        <h1><a href="/">&larr; {{ site.title }}</a></h1>
+        <nav>
+					{% include nav.html %}
+        </nav>
+        <hr class="right"/>
+      </header>
+      <div id="main" role="main">
+        {{ content }}
+      </div>
+      <footer>
+				{% if page.about == nil %}
+					<div id="license">
+						{% include cc-by-large.html %}
+					</div>
+				{% endif %}
+      </footer>
+    </div> <!--! end of #container -->
+  </div>
+</div>

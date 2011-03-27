@@ -1,0 +1,19 @@
+---
+layout: default
+title: Tags
+---
+<h2> Tags </h2>
+<div id="tag-search" class="top-search">
+	{% include site-search.html %}
+</div>
+<div class="clear"></div>
+
+
+<div id="tagcloud">
+	<ul>
+	{% for tag in site.iterable.tags %}
+	  <a style="font-size: {{ tag.posts | size | times:1.5 | plus: 10 }}px;" href="/{{ site.tag_dir }}/{{tag.name}}">
+	    {{ tag.name }}</a>{% if forloop.last == false %}&nbsp;{% endif %}
+	{% endfor %}
+	</ul>
+</div>

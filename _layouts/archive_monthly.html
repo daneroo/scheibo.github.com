@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h2>{{ page.month | to_month }} {{ page.year }}</h2>
+<div id="archive-search" class="top-search">
+	{% include site-search.html %}
+</div>
+
+<div class="archive">
+  {% for d in (1..31) reversed %}
+    {% if site.collated_posts[page.year][page.month][d] %}
+      {% for p in site.collated_posts[page.year][page.month][d] reversed %}
+		  <div class="post">
+		    <h4 class="title"><a href="{{ p.url }}/">{{ p.title }}</a></h4>
+		    <p class="date">{{ p.date | date_to_string }}</p>
+				<div class="clear"></div>
+		  </div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<hr />

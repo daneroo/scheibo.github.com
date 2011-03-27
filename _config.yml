@@ -1,0 +1,14 @@
+markdown: maruku
+pygments: true
+lsi: false
+permalink: /:year/:month/:day/:title
+exclude: lib
+
+related_tags: true
+tag_dir: tags
+
+author: Kirk Scheibelhut
+url: http://scheibo.com
+title: scheibo.com
+twitter: scheibo
+analytics: UA-15415096-1
