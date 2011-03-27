@@ -1,4 +1,4 @@
-site = (get :destination || '_site')
+site = (get :destination) || '_site'
 exclude = get :deploy_exclude
 
 namespace :deploy do
@@ -21,9 +21,9 @@ namespace :deploy do
   multitask :github do
     require 'git'
 
-    source_branch  = (get :source_branch  || "source")
-    deploy_branch  = (get :deploy_branch  || "master")
-    commit_message = (get :commit_message || "Site updated at #{Time.now.utc}")
+    source_branch  = (get :source_branch)  || "source"
+    deploy_branch  = (get :deploy_branch)  || "master"
+    commit_message = (get :commit_message) || "Site updated at #{Time.now.utc}"
 
     repo = Git.open('.')
     repo.branch("#{deploy_branch}").checkout
@@ -32,14 +32,14 @@ namespace :deploy do
     rm_rf(site)
     Dir["**/*"].each {|f| repo.add(f) }
     repo.status.deleted.each {|f, s| repo.remove(f)}
-    repo.commit(message)
+    repo.commit(commit_message)
     repo.push
     repo.branch("#{source_branch}").checkout
   end
 
   desc "deploys site into the deploy_path on the remote path using ssh_user"
   multitask :rsync do
-    site = get :desination || '_site'
+    site = (get :desination) || '_site'
     if (ssh_user = get :ssh_user) && (deploy_path = get :deploy_path)
       port = (get :ssh_port || 22 )
       if exclude
