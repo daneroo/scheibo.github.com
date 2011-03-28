@@ -4,7 +4,7 @@
   <title>Kirk Scheibelhut</title>
   <link href="http://scheibo.com/feed.xml" rel="self"/>
   <link href="http://scheibo.com/"/>
-  <updated>2011-03-27T20:05:34-04:00</updated>
+  <updated>2011-03-27T20:12:34-04:00</updated>
   <id>http://scheibo.com</id>
   <author>
     <name>Kirk Scheibelhut</name>
@@ -13,7 +13,7 @@
   
   <entry>
     <title type="html">Coming Soon</title>
-    <link href="{"safe"=>false, "auto"=>false, "server"=>false, "server_port"=>4000, "source"=>"/Users/scheibo/Code/src/www/scheibo.github.com", "destination"=>"/Users/scheibo/Code/src/www/scheibo.github.com/_site", "plugins"=>"/Users/scheibo/Code/src/www/scheibo.github.com/_plugins", "future"=>true, "lsi"=>false, "pygments"=>true, "markdown"=>"maruku", "permalink"=>"/:year/:month/:day/:title", "maruku"=>{"use_tex"=>false, "use_divs"=>false, "png_engine"=>"blahtex", "png_dir"=>"images/latex", "png_url"=>"/images/latex"}, "rdiscount"=>{"extensions"=>[]}, "kramdown"=>{"auto_ids"=>true, "footnote_nr"=>1, "entity_output"=>"as_char", "toc_levels"=>"1..6", "use_coderay"=>false, "coderay"=>{"coderay_wrap"=>"div", "coderay_line_numbers"=>"inline", "coderay_line_number_start"=>1, "coderay_tab_width"=>4, "coderay_bold_every"=>10, "coderay_css"=>"style"}}, "exclude"=>"lib", "related_tags"=>true, "tag_dir"=>"tags", "author"=>"Kirk Scheibelhut", "url"=>"http://scheibo.com", "title"=>"scheibo.com", "twitter"=>"scheibo", "analytics"=>"UA-15415096-1", "time"=>2011-03-27 20:05:34 -0400, "posts"=>[<Post: /2011/03/27/coming-soon>], "pages"=>[#<Jekyll:Page @name="404.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="feed.xml">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="sitemap.xml">, #<Jekyll:Page @name="index.html">], "html_pages"=>[#<Jekyll:Page @name="404.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">, #<Jekyll:Page @name="index.html">], "categories"=>{}, "tags"=>{"temporary"=>[<Post: /2011/03/27/coming-soon>]}, "collated_posts"=>{}, "iterable"=>{"categories"=>[], "tags"=>[{"name"=>"temporary", "posts"=>[<Post: /2011/03/27/coming-soon>]}]}}/2011/03/27/coming-soon"/>
+    <link href="http://scheibo.com/2011/03/27/coming-soon"/>
     <id>http://scheibo.com/2011/03/27/coming-soon</id>
     <updated>2011-03-27T20:03:39-04:00</updated>
     <content type="html">
