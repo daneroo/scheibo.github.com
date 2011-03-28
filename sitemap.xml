@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
      <loc>http://scheibo.com</loc>
-      <lastmod>2011-03-27</lastmod>
+      <lastmod>2011-03-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>1</priority>
    </url>
    <url>
      <loc>http://scheibo.com/archive</loc>
-      <lastmod>2011-03-27</lastmod>
+      <lastmod>2011-03-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
      <loc>http://scheibo.com/tags</loc>
-      <lastmod>2011-03-27</lastmod>
+      <lastmod>2011-03-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.5</priority>
    </url>
