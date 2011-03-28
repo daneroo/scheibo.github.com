@@ -7,9 +7,9 @@ namespace :deploy do
   multitask :amazons3 do
     if (bucket = get :s3bucket)
       if exclude
-        sh "s3cmd sync --acl-public --delete-removed --exclude-from #{exclude} #{site}/ s3://#{bucket}']}"
+        sh "s3cmd sync --acl-public --delete-removed --exclude-from #{exclude} #{site}/ s3://#{bucket}"
       else
-        sh "s3cmd sync --acl-public --delete-removed #{site}/ s3://#{bucket}']}"
+        sh "s3cmd sync --acl-public --delete-removed #{site}/ s3://#{bucket}"
       end
     else
       puts "FAILURE: Please specify an 's3bucket'"
@@ -41,7 +41,7 @@ namespace :deploy do
   multitask :rsync do
     site = (get :desination) || '_site'
     if (ssh_user = get :ssh_user) && (deploy_path = get :deploy_path)
-      port = (get :ssh_port || 22 )
+      port = (get :ssh_port) || 22
       if exclude
         sh "rsync -avz --delete --exclude-from #{exclude} -e 'ssh -p #{ssh_port}' #{site}/ #{ssh_user}:#{deploy_path}"
       else
