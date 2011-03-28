@@ -1,6 +1,6 @@
 task :jekyll => ['jekyll:generate']
 
-namespace :ejekyll do
+namespace :jekyll do
 
   desc "runs jekyll on the source"
   task :generate do
