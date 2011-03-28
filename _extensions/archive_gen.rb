@@ -1,7 +1,7 @@
 # Code based on http://mikewest.org/2009/11/my-jekyll-fork
 
 module Jekyll
-  
+
   module Filters
     def to_month(input)
       return Date::MONTHNAMES[input.to_i]
@@ -9,7 +9,7 @@ module Jekyll
 
     def to_month_abbr(input)
       return Date::ABBR_MONTHNAMES[input.to_i]
-    end    
+    end
   end
 
   class Archive < Page
@@ -32,13 +32,22 @@ module Jekyll
       self.data['year'] = year.to_i
       month and self.data['month'] = month.to_i
       day and self.data['day'] = day.to_i
+
+      if year && month && day
+        self.data['title'] = "#{Date::MONTHNAMES[month.to_i]} #{day}, #{year}"
+      elsif year  &&  month
+        self.data['title'] = "#{Date::MONTHNAMES[month.to_i]} #{year}"
+      else
+        self.data['title'] = "#{year}"
+      end
+
     end
   end
 
-  
+
   class Site
     attr_accessor :collated
-    
+
     #   Write post archives to <dest>/<year>/, <dest>/<year>/<month>/,
     #   <dest>/<year>/<month>/<day>/
     #
@@ -73,7 +82,7 @@ module Jekyll
   AOP.after(Site, :reset) do |site_instance, result, args|
     site_instance.collated = {}
   end
-  
+
   AOP.after(Site, :render) do |site_instance, result, args|
     site_instance.posts.reverse.each do |post|
       y, m, d = post.date.year, post.date.month, post.date.day
@@ -89,11 +98,11 @@ module Jekyll
       site_instance.collated[ y ][ m ][ d ] += [ post ]
     end
   end
-  
+
   AOP.after(Site, :write) do |site_instance, result, args|
     site_instance.write_archives
   end
-  
+
   AOP.around(Site, :site_payload) do |site_instance, args, proceed, abort|
     result = proceed.call
     result["site"]["collated_posts"] = site_instance.collated
